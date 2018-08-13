@@ -12,6 +12,18 @@
 	     url(/fonts/ProximaNova-Bold.woff?8aeae3d8222c2eba9cc8f3804fec4328) format('woff'), url(/fonts/ProximaNova-Bold.ttf?64b7811d5e67b577aab8e8bb9047fc10)  format('truetype'), url(/fonts/ProximaNova-Bold.svg?4e15407a4d27604ea5ce5a580386e756#ProximaNova-Bold) format('svg');
   font-weight: 700;
   font-style: normal;
+}@font-face {
+  font-family: 'Gotham Book';
+  src: url(/fonts/GothamBook.ttf?b54724f54d4dd3f6796e3c4cc422f998);
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Gotham Book';
+  src: url(/fonts/GothamBold.ttf?db33e70bc9dee9fa9ae9737ad83d77ba);
+  font-weight: 700;
+  font-style: normal;
 }/*!
  * Bootstrap v4.1.3 (https://getbootstrap.com/)
  * Copyright 2011-2018 The Bootstrap Authors
@@ -10520,13 +10532,20 @@ body {
   text-transform: uppercase;
   font-weight: 600;
   letter-spacing: 10px;
+  font-family: Gotham Book;
+  white-space: nowrap;
+  margin-bottom: 50px;
 }
 
 #sing-in-form h2 span {
   vertical-align: top;
-  font-size: 35pt;
+  font-size: 3vw;
   font-weight: 500;
   letter-spacing: 0;
   margin-right: 10px;
+}
+
+#sing-in-form .form-group {
+  margin-bottom: 2rem;
 }
 

@@ -2,6 +2,7 @@
 // Fonts
 @import url("https://fonts.googleapis.com/css?family=Raleway:300,400,600");
 @import "../fonts/ProximaNova/styles.css";
+@import "../fonts/GothamBook/styles.css";
 
 // Variables
 @import "variables";
@@ -46,15 +47,22 @@ body{
     text-transform: uppercase;
     font-weight: 600;
     letter-spacing: 10px;
+    font-family: Gotham Book;
+    white-space: nowrap;
+    margin-bottom: 50px;
 
     span{
       vertical-align: top;
-      font-size: 35pt;
+      font-size: 3vw;
       font-weight: 500;
       letter-spacing: 0;
       margin-right: 10px;
     }
 
+  }
+
+  .form-group {
+    margin-bottom: 2rem;
   }
 
 }

@@ -21,26 +21,6 @@ let DashboardPage = (props) => {
     return <h1 className="mt-5">Dashboard Page</h1>;
 };
 
-// const validatorSignInForm = (values) => {
-//     const result = validate(values, {
-//         email: {
-//             presence: {
-//                 message: '^Please enter your email address.'
-//             },
-//             email: {
-//                 message: '^Please enter a valid email address.'
-//             }
-//         },
-//         password: {
-//             presence: {
-//                 message: '^Please enter your password.'
-//             }
-//         }
-//     });
-//
-//     return result;
-// };
-
 const rootReducer = combineReducers({
     form: formReducer,
     // my other reducers come here
