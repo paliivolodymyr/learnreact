@@ -25,5 +25,9 @@
         "reactstrap": "^5.0.0-alpha.3",
         "redux": "^3.7.2",
         "redux-form": "^7.1.1"
+    },
+    "dependencies": {
+        "@material-ui/core": "^1.5.0",
+        "validate.js": "^0.12.0"
     }
 }

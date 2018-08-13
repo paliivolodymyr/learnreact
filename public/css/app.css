@@ -1,4 +1,18 @@
-@import url(https://fonts.googleapis.com/css?family=Raleway:300,400,600);/*!
+@import url(https://fonts.googleapis.com/css?family=Raleway:300,400,600);@font-face {
+  font-family: 'Proxima Nova';
+  src: url(/fonts/ProximaNova-Regular.eot?863cf05ec68b1b794b29dc0f07d4d2a3?#iefix) format('embedded-opentype'),  url(/fonts/ProximaNova-Regular.otf?bf9f5d50c1b928ff21436517a1a95ad9)  format('opentype'),
+	     url(/fonts/ProximaNova-Regular.woff?9c4c67d2c6a7edcc05c5c0e3e7c04cd1) format('woff'), url(/fonts/ProximaNova-Regular.ttf?a91d6006f7713363f3132cc2b1d6a22d)  format('truetype'), url(/fonts/ProximaNova-Regular.svg?322d8b9472a1cb2966de0202c5f006ff#ProximaNova-Regular) format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Proxima Nova';
+  src: url(/fonts/ProximaNova-Bold.eot?8abdeff20df218e593cfa1b6d05ed876?#iefix) format('embedded-opentype'),  url(/fonts/ProximaNova-Bold.otf?72b6f2c9990bd3d37b8013a59ed78902)  format('opentype'),
+	     url(/fonts/ProximaNova-Bold.woff?8aeae3d8222c2eba9cc8f3804fec4328) format('woff'), url(/fonts/ProximaNova-Bold.ttf?64b7811d5e67b577aab8e8bb9047fc10)  format('truetype'), url(/fonts/ProximaNova-Bold.svg?4e15407a4d27604ea5ce5a580386e756#ProximaNova-Bold) format('svg');
+  font-weight: 700;
+  font-style: normal;
+}/*!
  * Bootstrap v4.1.3 (https://getbootstrap.com/)
  * Copyright 2011-2018 The Bootstrap Authors
  * Copyright 2011-2018 Twitter, Inc.
@@ -10471,9 +10485,48 @@ a.text-dark:focus {
   }
 }
 
-.navbar-laravel {
-  background-color: #fff;
-  -webkit-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
-          box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
+body {
+  overflow-x: hidden;
+}
+
+.fullscreen {
+  height: 100vh;
+}
+
+#sing-in-form input {
+  border: none;
+  border-bottom: 2px solid #ccc;
+  border-radius: 0;
+  padding: .1rem 0;
+  font-family: Proxima Nova;
+  color: #000;
+}
+
+#sing-in-form button {
+  border-radius: 25px;
+  background-color: #ff0c00;
+  border: none;
+  font-family: Proxima Nova;
+  padding: 10px 50px;
+  font-size: 13pt;
+  margin: 80px auto 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+#sing-in-form h2 {
+  font-size: 5vw;
+  text-transform: uppercase;
+  font-weight: 600;
+  letter-spacing: 10px;
+}
+
+#sing-in-form h2 span {
+  vertical-align: top;
+  font-size: 35pt;
+  font-weight: 500;
+  letter-spacing: 0;
+  margin-right: 10px;
 }
 

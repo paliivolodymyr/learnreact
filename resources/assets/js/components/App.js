@@ -1,19 +1,18 @@
-import React, { Component } from 'react';
+import React, {Component} from 'react';
 import ReactDOM from 'react-dom';
 
-import {
-    BrowserRouter,
-    Route
-} from 'react-router-dom';
+import {BrowserRouter, Link, Route} from 'react-router-dom';
 
-import { createStore, combineReducers } from 'redux'
-import { reducer as formReducer } from 'redux-form'
+import {combineReducers, createStore} from 'redux'
+import {reducer as formReducer, reduxForm} from 'redux-form'
+
+import {Provider} from 'react-redux'
+import {SignInPage} from "./SingInPage";
+
+// Other components are here collapsed
 
 let LandingPage = (props) => {
     return <h1 className="mt-5">Landing Page</h1>;
-};
-let SignInPage = (props) => {
-    return <h1 className="mt-5">Sign In Page</h1>;
 };
 let CreateAccountPage = (props) => {
     return <h1 className="mt-5">Create Account Page</h1>;
@@ -21,6 +20,33 @@ let CreateAccountPage = (props) => {
 let DashboardPage = (props) => {
     return <h1 className="mt-5">Dashboard Page</h1>;
 };
+
+// const validatorSignInForm = (values) => {
+//     const result = validate(values, {
+//         email: {
+//             presence: {
+//                 message: '^Please enter your email address.'
+//             },
+//             email: {
+//                 message: '^Please enter a valid email address.'
+//             }
+//         },
+//         password: {
+//             presence: {
+//                 message: '^Please enter your password.'
+//             }
+//         }
+//     });
+//
+//     return result;
+// };
+
+const rootReducer = combineReducers({
+    form: formReducer,
+    // my other reducers come here
+});
+
+const store = createStore(rootReducer);
 
 let Header = (props) => {
     return (
@@ -58,14 +84,17 @@ class App extends Component {
 
     render() {
         return (
-            <BrowserRouter>
-                <div>
-                    <Route exact path="/" component={LandingPage} />
-                    <Route path="/signin" component={SignInPage} />
-                    <Route path="/account/create" component={CreateAccountPage} />
-                    <Route path="/dashboard" component={DashboardPage} />
-                </div>
-            </BrowserRouter>
+            <Provider store={store}>
+                <BrowserRouter>
+                    <div>
+                        {/*<Header />*/}
+                        <Route exact path="/" component={LandingPage} />
+                        <Route path="/signin" component={SignInPage} />
+                        <Route path="/account/create" component={CreateAccountPage} />
+                        <Route path="/dashboard" component={DashboardPage} />
+                    </div>
+                </BrowserRouter>
+            </Provider>
         );
     }
 };

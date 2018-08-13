@@ -1,6 +1,7 @@
 
 // Fonts
 @import url("https://fonts.googleapis.com/css?family=Raleway:300,400,600");
+@import "../fonts/ProximaNova/styles.css";
 
 // Variables
 @import "variables";
@@ -8,7 +9,52 @@
 // Bootstrap
 @import '~bootstrap/scss/bootstrap';
 
-.navbar-laravel {
-  background-color: #fff;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
+
+body{
+  overflow-x: hidden;
+}
+
+.fullscreen {
+  height: 100vh;
+}
+
+#sing-in-form{
+
+  input{
+    border: none;
+    border-bottom: 2px solid #ccc;
+    border-radius: 0;
+    padding: .1rem 0;
+    font-family: Proxima Nova;
+    color: #000;
+  }
+
+  button{
+    border-radius: 25px;
+    background-color: #ff0c00;
+    border: none;
+    font-family: Proxima Nova;
+    padding: 10px 50px;
+    font-size: 13pt;
+    margin: 80px auto 0;
+    display: flex;
+  }
+
+  h2{
+
+    font-size: 5vw;
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: 10px;
+
+    span{
+      vertical-align: top;
+      font-size: 35pt;
+      font-weight: 500;
+      letter-spacing: 0;
+      margin-right: 10px;
+    }
+
+  }
+
 }
